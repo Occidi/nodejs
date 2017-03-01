@@ -3,17 +3,18 @@ const express = require('express');
 const app = express();
 
 app.set('view engine', 'ejs');
+app.use('/assets', express.static('assets'));
 
 app.get('/', function(req, res) {
-    res.sendFile(__dirname + '/index.html');
+    res.render('index');
 });
 
 app.get('/contact', function(req, res) {
-    res.sendFile(__dirname + '/contact.html');
+    res.render('contact');
 });
 
 app.get('/profile/:id', function(req, res) {
-    const data = {age: 23, job: 'dev'};
+    const data = {age: 23, job: 'dev', hobbies:['league','coding','netflix']};
     res.render('profile', {champion : req.params.id, data : data});
 });
 
