@@ -10,7 +10,8 @@ app.get('/', function(req, res) {
 });
 
 app.get('/contact', function(req, res) {
-    res.render('contact');
+    const contact = req.query;
+    res.render('contact', {contact : contact});
 });
 
 app.get('/profile/:id', function(req, res) {

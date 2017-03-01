@@ -13,5 +13,14 @@
         <% include ./partials/nav.ejs %>
         <h1>Welcome contact</h1>
         <p>Yep nice memes</p>
+        <form id="contact-form">
+            <label for="who">Who do you want to contact ?</label>
+            <input type="text" name="who" value="<%= contact.moi %>">
+            <label for="department">Which department ?</label>
+            <input type="text" name="department" value="<%= contact.department %>">
+            <label for="email">Your email ?</label>
+            <input type="email" name="email" value="">
+            <input type="submit" name="" value="submit">
+        </form>
     </body>
 </html>
