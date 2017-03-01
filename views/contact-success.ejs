@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="./assets/styles.css">
+        <style>
+        body{background: lightgreen;}
+        </style>
+    </head>
+    <body>
+        <% include ./partials/nav.ejs %>
+        <h1>Welcome contact</h1>
+        <p>Ty for contacting <%= data.who %> from the <%= data.department %> department !</p>
+        <p>We will get back to you asap at <%= data.email %> ;)</p>
+    </body>
+</html>

@@ -13,7 +13,7 @@
         <% include ./partials/nav.ejs %>
         <h1>Welcome contact</h1>
         <p>Yep nice memes</p>
-        <form id="contact-form">
+        <form id="contact-form" method="POST" action="/contact">
             <label for="who">Who do you want to contact ?</label>
             <input type="text" name="who" value="<%= contact.moi %>">
             <label for="department">Which department ?</label>
